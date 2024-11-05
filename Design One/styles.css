@@ -1,0 +1,141 @@
+/* Center everything */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f6fa;
+    font-family: Arial, sans-serif;
+}
+
+.centered-container {
+    perspective: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flip-card {
+    width: 320px;
+    height: 500px;
+    position: relative;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+/* Floating Label Style */
+.floating-label {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.floating-label label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%); /* Center the label vertically */
+    color: #999;
+    font-size: 1em;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+/* Placeholder-like behavior when input is empty */
+.floating-label input:placeholder-shown + label {
+    top: 50%;
+    left: 15px;
+    font-size: 1em;
+    color: #999;
+    transform: translateY(-50%); /* Ensure it's vertically centered */
+}
+
+/* Move label to top when input is focused or filled */
+.floating-label input:focus + label,
+.floating-label input:not(:placeholder-shown) + label {
+    top: -8px;
+    left: 10px;
+    font-size: 0.75em;
+    color: #007bff;
+    background-color: #fff;
+    padding: 0 5px;
+    transform: translateY(0); /* Reset transform when moved to the top */
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1em;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Button styling */
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Toggle Link Style */
+.toggle-link {
+    display: block;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.toggle-link:hover {
+    color: #0056b3;
+    text-decoration: none;
+}

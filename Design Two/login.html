@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="flip-card" id="card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>Login</h2>
+                    <form>
+                        <div class="input-container">
+                            <input type="text" class="input-box" id="login-username" required>
+                            <label for="login-username">Username</label>
+                        </div>
+                        <div class="input-container">
+                            <input type="password" class="input-box" id="login-password" required>
+                            <label for="login-password">Password</label>
+                        </div>
+                        <button type="submit" class="submit-btn">Login</button>
+                        <button type="button" class="btn" onclick="openRegister()">Register</button>
+                    </form>
+                </div>
+                <div class="flip-card-back">
+                    <h2>Register</h2>
+                    <form>
+                        <div class="input-container">
+                            <input type="text" class="input-box" id="register-username" required>
+                            <label for="register-username">Username</label>
+                        </div>
+                        <div class="input-container">
+                            <input type="email" class="input-box" id="register-email" required>
+                            <label for="register-email">Email</label>
+                        </div>
+                        <div class="input-container">
+                            <input type="password" class="input-box" id="register-password" required>
+                            <label for="register-password">Password</label>
+                        </div>
+                        <button type="submit" class="submit-btn">Register</button>
+                        <button type="button" class="btn" onclick="openLogin()">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
